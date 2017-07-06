@@ -60,7 +60,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .comce{   
     width: 100%;   
     height: 100%;
