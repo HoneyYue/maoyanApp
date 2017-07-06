@@ -1,24 +1,5 @@
 <template>
   <div>
-    <p class="title">猫眼后台项目</p>
-    <!-- <ul>
-    	<li>
-          <strong>用户管理</strong>
-          <p><router-link :to="'/info/users'">用户列表</router-link></p>
-      </li>
-      <li>
-          <strong>电影管理</strong>
-          <p><router-link :to="'/info/movie'">电影列表</router-link></p>
-      </li>
-      <li>
-          <strong>影院管理</strong>
-          <p><router-link :to="'/info/theater'">影院列表</router-link></p>
-      </li>
-      <li>
-          <strong>排片管理</strong>
-          <p><router-link :to="'/info/schedule'">新增排片</router-link></p>
-      </li>      
-    </ul> -->
     <div class="trees">
       <el-menu default-active="2" class="el-menu-vertical-demo" @select="handleNodeClick">
         <el-submenu index="1">
@@ -39,8 +20,6 @@
         </el-submenu>
       </el-menu>
     </div>
-
-        
     <div class="mesg">
     	<router-view></router-view>
     </div>
@@ -70,14 +49,10 @@ export default {
         }
       }
   }
-        
 }
 </script>
 
 <style scoped>
-.el-menu-vertical-demo{
-  
-}
 .el-menu {
   margin: 0;
   margin-top: 70px;
@@ -130,7 +105,7 @@ ul li a{
 }
 .mesg{
   float: left;
-  margin-left: 180px;
+  margin-left: 20px;
   margin-top: 20px;
 }
 </style>

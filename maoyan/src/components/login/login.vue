@@ -59,6 +59,7 @@ export default {
 }
 </script>
 
+
 <style>
 .comce{   
     width: 100%;   
