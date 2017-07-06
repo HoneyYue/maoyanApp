@@ -299,7 +299,7 @@ export default {
 
 <style scoped>
  .el-select .el-input {
-    width: 110px;
+    
   }
   .box{
   	margin-top:50px;
