@@ -10,51 +10,56 @@ import seating from "../components/info/seating/seating.vue"
 import studio from "../components/info/studio/studio.vue"
 import theater from "../components/info/theater/theater.vue"
 import users from "../components/info/users/users.vue"
+import videohall from "../components/info/videohall/videohall.vue"
 
 
 Vue.use(Router)
 
 export default new Router({
   routes: [{
-      path: '/',
-      name: 'login',
-      component: login
+    path: '/',
+    name: 'login',
+    component: login
+  }, {
+    path: '/login/:username',
+    name: 'login',
+    component: login
+  }, {
+    path: '/reg',
+    name: 'reg',
+    component: reg
+  }, {
+    path: '/info',
+    name: 'info',
+    component: info,
+    children: [{
+      path: "movie",
+      name: "movie",
+      component: movie
     }, {
-      path: '/login/:username',
-      name: 'login',
-      component: login
+      path: "schedule",
+      name: "schedule",
+      component: schedule
     }, {
-      path: '/reg',
-      name: 'reg',
-      component: reg
+      path: "seating",
+      name: "seating",
+      component: seating
     }, {
-      path: '/info',
-      name: 'info',
-      component: info,
-      children:[{
-        path:"movie",
-        name:"movie",
-        component:movie
-      }, {
-        path:"schedule",
-        name:"schedule",
-        component:schedule
-      }, {
-        path:"seating",
-        name:"seating",
-        component:seating
-      }, {
-        path:"studio",
-        name:"studio",
-        component:studio
-      }, {
-        path:"theater",
-        name:"theater",
-        component:theater
-      }, {
-        path:"users",
-        name:"users",
-        component:users
-      }]
+      path: "studio",
+      name: "studio",
+      component: studio
+    }, {
+      path: "theater",
+      name: "theater",
+      component: theater
+    }, {
+      path: "videohall/:_id",
+      name: "videohall",
+      component: videohall
+    }, {
+      path: "users",
+      name: "users",
+      component: users
     }]
+  }]
 })
