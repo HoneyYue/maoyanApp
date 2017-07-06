@@ -105,7 +105,7 @@ ul li a{
 }
 .mesg{
   float: left;
-  margin-left: 20px;
+  margin-left: 200px;
   margin-top: 20px;
 }
 </style>
