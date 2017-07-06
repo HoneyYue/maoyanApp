@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 .input-text{
-  overflow: hidden
+  overflow: hidden;
 }
 .input-text span{
   float: left;
