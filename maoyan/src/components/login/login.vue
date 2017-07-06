@@ -20,9 +20,9 @@ export default {
     data() {
       // console.log(this.$route.params)
       return {
-        password:this.$route.params.password,
-        username:this.$route.params.username,
-        activeIndex: '1'
+        password:"",
+        username:"",
+        
       };
     },
     methods:{
@@ -36,7 +36,6 @@ export default {
         username:this.username,
         password:this.password
       })
-
 
       if(data.data.length === 1) {
         this.$notify({
@@ -53,7 +52,7 @@ export default {
         }
       },
           handleSelect(key, keyPath) {
-            console.log(key, keyPath);
+            
         }
     }
 

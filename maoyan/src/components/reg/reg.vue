@@ -47,7 +47,7 @@ export default {
           username:this.username,
           password:this.password
         })
-        console.log(data)
+       
         router.push(`/login/${this.username}`)
         // console.log(this.username,this.password);
       }
