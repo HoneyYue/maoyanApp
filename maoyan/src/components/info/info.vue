@@ -20,9 +20,27 @@
       </li>      
     </ul> -->
     <div class="trees">
-      <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+      <el-menu default-active="2" class="el-menu-vertical-demo" @select="handleNodeClick">
+        <el-submenu index="1">
+          <template slot="title"><i class="el-icon-star-on"></i>用户管理</template>
+          <el-menu-item index="user">用户列表</el-menu-item>
+        </el-submenu>
+        <el-submenu index="2">
+          <template slot="title"><i class="el-icon-picture"></i>电影管理</template>
+          <el-menu-item index="movie">电影列表</el-menu-item>
+        </el-submenu>
+        <el-submenu index="3">
+          <template slot="title"><i class="el-icon-menu"></i>影院管理</template>
+          <el-menu-item index="theater">影院列表</el-menu-item>
+        </el-submenu>
+        <el-submenu index="4">
+          <template slot="title"><i class="el-icon-view"></i>排片管理</template>
+          <el-menu-item index="schedule">新增排片</el-menu-item>
+        </el-submenu>
+      </el-menu>
     </div>
-    
+
+        
     <div class="mesg">
     	<router-view></router-view>
     </div>
@@ -34,38 +52,22 @@ import router from '../../router/index.js'
 
 export default {
   name: 'info',
-  data(){
-    return {
-      data: [{
-        label: '用户管理',
-        children: [{
-          label: '用户列表'
-        }]
-      }, {
-        label: '电影管理',
-        children: [{
-          label: '电影列表'
-        }]
-      }, {
-        label: '影院管理',
-        children: [{
-          label: '影院列表'
-        }]
-      },{
-        label: '排片管理',
-        children: [{
-          label: '新增排片'
-        }]
-      }],
-      defaultProps: {
-        children: 'children',
-        label: 'label'
-      }
-    }
-  },
   methods:{    
     handleNodeClick(data) {
-        console.log(data);
+        switch(data){
+          case 'user':
+            router.push('/info/users')
+            break;
+          case 'movie':
+            router.push('/info/movie')
+            break;
+          case 'theater':
+            router.push('/info/theater')
+            break;
+          case 'schedule':
+            router.push('/info/schedule')
+            break;
+        }
       }
   }
         
@@ -73,6 +75,14 @@ export default {
 </script>
 
 <style scoped>
+.el-menu-vertical-demo{
+  
+}
+.el-menu {
+  margin: 0;
+  margin-top: 70px;
+  border: none;
+}
 .title{
     position: fixed;
     top: 0;
@@ -91,21 +101,13 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
-    width: 150px;
+    width: 160px;
     height: 100%;
     z-index: 1;
-    background: #123445;
+    background: #eef1f6;
     margin-right: 20px;
     font-size: 14px;
     color: #fff;
-}
-.el-tree{
-  margin-top: 70px;
-  background: #123445;
-  border: none;
-}
-.el-tree-node__content:hover {
-    background: #666 !important;
 }
 ul,li{
   list-style: none;
