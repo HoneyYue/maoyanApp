@@ -68,11 +68,13 @@ export default {
     overflow: hidden;   
     font-style: sans-serif;
     position: absolute;
+    background: url('../../assets/bg.jpg');
+    background-size: cover;
 }
 .cde{   
     width: 100%;
     height: 100%;
-    font-family: 'Open Sans',sans-serif;
+    font-family: verdana,helvetica,arial,sans-serif;
     margin: 0; 
     background-size:100% 100%;
 }
@@ -86,7 +88,7 @@ export default {
 } 
 #login h1{   
     color: #fff;   
-    text-shadow:0 0 10px;   
+    text-shadow:0 0 3px;   
     letter-spacing: 1px;   
     text-align: center;   
 }   
@@ -101,8 +103,7 @@ input{
     outline: none;   
     padding: 10px;   
     font-size: 18px;   
-    color: #fff;   
-    text-shadow:1px 1px 1px;   
+    color: #fff;     
     border-top: 1px solid #312E3D;   
     border-left: 1px solid #312E3D;   
     border-right: 1px solid #312E3D;   
@@ -123,5 +124,6 @@ input{
     border-radius: 5px;   
     margin: 0;
     float: left; 
+    font-weight: 700;
 }  
 </style>
