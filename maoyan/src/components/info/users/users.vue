@@ -1,6 +1,6 @@
 <template>
-	<div>
-	<el-button type="primary" @click="handleAdd">新增</el-button>
+	<div class="top">
+	
 	<el-table
     :data="tableData"
     border
@@ -83,6 +83,7 @@
       :total="total">
     </el-pagination>
   </div>
+  <el-button type="primary" @click="handleAdd">新增</el-button>
 	</div>
     
 
@@ -227,5 +228,7 @@ import axios from "axios";
 </script>
 
 <style scoped>
-
+.top{
+  margin-top: 51px;
+}
 </style>
